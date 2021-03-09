@@ -74,7 +74,7 @@ document.querySelector(".btn").addEventListener("click", async () =>{
 
                 //ouvrir un modal
                 
-                document.querySelector("#popUpId").style.display = "flex";
+                document.querySelector("#popUpId").style.display = "flex";// à modifier
             
                 
 
@@ -106,7 +106,7 @@ document.querySelector(".btn").addEventListener("click", async () =>{
 
 
 //------------------------------add a character-------------------------------
-const modal = ()  => {
+const createCharModal = ()  => {
 
    // document.querySelector(".button-modal").addEventListener("click",  () =>{
 
@@ -146,15 +146,10 @@ const modal = ()  => {
     //});
 }
 
-modal();
+
+import {createCharModal} from "./createCharModal.js";
+createCharModal();
 
 
-//function convert image
-document.querySelector("#file").addEventListener("change",(e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onloadend = () => {
-        image = reader.result.replace('data:', '').replace(/^.+,/, '');
-    };
-    reader.readAsDataURL(file)
-});
+import {convertImages} from "./convertImage.js";
+convertImages();
