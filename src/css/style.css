@@ -121,7 +121,7 @@ body {
     padding-right: 5%;
     padding-top: 2%;
     padding-bottom: 2%;
-    background-image: url(../../img/background.jpg); /*image background ../../img/background*/
+    background-image: url(/img/background.jpg);
     background-position: center;
     text-shadow: 2px 2px 5px #7d0381; }
     body .top .heroTitle {
@@ -224,7 +224,6 @@ body {
     justify-content: center; }
     body .flex-container .carte {
       width: 80%;
-      border: 1px solid white;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;

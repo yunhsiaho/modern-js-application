@@ -1,13 +1,25 @@
 //nom de la const API est tjrs response
 //const response = "https://character-database.becode.xyz/characters"
 
+// import createCharModal from "./createCharModal.js";
+// createCharModal();
+
+
+import convertImages from "./convertImages.js";
+convertImages();
+
+// import * as allExtra from "./extra.js";
+// allExtra.uploadAvatar();
+// allExtra.reload();
+// allExtra.closePage();
+
 const tpl = document.querySelector("#tpl") ;
 const target = document.querySelector("#target");
 let idArray = [];
-let image = "";
+
 
 document.querySelector(".btn").addEventListener("click", async () =>{
-    
+   
 
     const response = await fetch("https://character-database.becode.xyz/characters");
     const character = await response.json();
@@ -32,7 +44,48 @@ document.querySelector(".btn").addEventListener("click", async () =>{
         idArray.push(id);
         //console.log(idArray)
 
+        //------------------------------add a character-------------------------------
+const createCharModal = ()  => {
+
+    // document.querySelector(".button-modal").addEventListener("click",  () =>{
+
+        document.querySelector(".button-create").addEventListener("click",
+        async () =>{
+
+            const name = document.getElementById("name").value;
+            //console.log(name);
+    
+            const shortDescription = document.getElementById("shortDescription").value;
+            //console.log(shortDescription);
+            
+            let image = "";
         
+            const description = document.getElementById("description").value;
+            //console.log(description);
+
+
+        
+            //const [name, shortDescription, description,id] = values;
+            
+        
+            const response = await fetch("https://character-database.becode.xyz/characters", {
+                method: "POST",
+                headers: {
+                        "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: name,
+                    shortDescription: shortDescription,
+                    description : description,
+                    image,
+                
+                })
+            })
+        })
+
+    //});
+}
+// export default createCharModal;
 
         //---------------------delete a character---------------------------
         
@@ -74,7 +127,7 @@ document.querySelector(".btn").addEventListener("click", async () =>{
 
                 //ouvrir un modal
                 
-                document.querySelector("#popUpId").style.display = "flex";
+                document.querySelector("#popUpId").style.display = "flex";// à modifier
             
                 
 
@@ -105,56 +158,26 @@ document.querySelector(".btn").addEventListener("click", async () =>{
 });
 
 
-//------------------------------add a character-------------------------------
-const modal = ()  => {
-
-   // document.querySelector(".button-modal").addEventListener("click",  () =>{
-
-        document.querySelector(".button-create").addEventListener("click",
-        async () =>{
-
-            const name = document.getElementById("name").value;
-            //console.log(name);
-    
-            const shortDescription = document.getElementById("shortDescription").value;
-            //console.log(shortDescription);
-    
-            const description = document.getElementById("description").value;
-            //console.log(description);
-
-
-        
-            //const [name, shortDescription, description,id] = values;
-            
-        
-            const response = await fetch("https://character-database.becode.xyz/characters", {
-                method: "POST",
-                headers: {
-                        "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    name: name,
-                    shortDescription: shortDescription,
-                    description : description,
-                    image,
-            
-                   
-                })
-            })
-         })
-
-    //});
+// export let uploadAvatar = 
+(event)=> {
+    let avatar = document.getElementById('output');
+    avatar.src = URL.createObjectURL(event.target.files[0]);
 }
 
-modal();
+// export 
+let reload = document.querySelector(".button-create").addEventListener("click",  () =>{
+    location.reload();
+})
 
 
-//function convert image
-document.querySelector("#file").addEventListener("change",(e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onloadend = () => {
-        image = reader.result.replace('data:', '').replace(/^.+,/, '');
-    };
-    reader.readAsDataURL(file)
-});
+
+// export let closePage = 
+window.onclick = (event)=> {
+    let bigModal= document.querySelector("#bigModal");
+    let popUpPage = document.querySelector('#popUpId');
+    if (event.target == bigModal) {
+        bigModal.style.display = "none";
+    }else if (event.target == popUpPage) {
+        popUpPage.style.display = "none";
+    }
+}
