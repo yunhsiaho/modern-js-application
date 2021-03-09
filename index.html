@@ -55,33 +55,35 @@
   <button class="btn">show-cards</button>
   
   <div class="flex-container">
-
     <template id="tpl">
-      <li class="theCard">
-          <img class="card-img" src="" alt="">
-        <div class="card-body">
-          <h4 class="card-name"></h4>
-          <p class="card-shortDescription"></p>
-          <div class="card-description"></div> 
-          <div class="buttonGroup">
-            <button class="button button-edit">Edit</button>
-            <button class="button button-delete">Delete</button>
-          </div>           
-        </div> 
-        <!-- div change!!!!!!!!!!!!! -->
-      </li>
+      <li class="theCard" onclick="document.getElementById('bigModal').style.display='block'">
+        <img class="card-img" src="" alt="">
+      <div class="card-body">
+        <h4 class="card-name"></h4>
+        <p class="card-shortDescription"></p>
+        <div class="card-description"></div> 
+        <div class="buttonGroup">
+          <button class="button button-edit">Edit</button>
+          <button class="button button-delete">Delete</button>
+        </div>
+      </div> 
+      <div class="bigModal" id="bigModal" style="display:none;">
+        <form class="bigModal-content">
+          <img class="modal-img" src="" alt="">
+      <div class="modal-body">
+        <h4 class="modal-name"></h4>
+        <p class="modal-shortDescription"></p>
+        <div class="modal-description"></div>         
+      </div> 
+        </form>
+        </div>
+    </li>      
     </template>
-
     <div class="carte" id="target"></div>
-
   </div> 
   
-  <script>
-    var uploadAvatar = (event)=> {
-      var avatar = document.getElementById('output');
-      avatar.src = URL.createObjectURL(event.target.files[0]);
-    };
-  </script>
+    
+  <script src="src/extra.js"></script>
   <script src="src/script.js"></script>
 </body>
 
