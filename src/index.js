@@ -1,11 +1,14 @@
+//import "regenerator-runtime/runtime";
 //nom de la const API est tjrs response
 //const response = "https://character-database.becode.xyz/characters"
 
-import { modal } from "./modal.js";
-import {fetchDelete } from "./fetchDelete.js";
-import { fetchEdit } from "./fetchEdit.js";
-import { setModal2Value } from "./modal2Value.js";
-import { closeModal } from "./closeModal.js";
+
+import { modal } from "../module/modal.js";
+import {fetchDelete } from "../module/fetchDelete.js";
+import { fetchEdit } from "../module/fetchEdit.js";
+import { setModal2Value } from "../module/modal2Value.js";
+import { closeModal } from "../module/closeModal.js";
+
 
 const tpl = document.querySelector("#tpl") ;
 const target = document.querySelector("#target");
@@ -50,4 +53,4 @@ document.querySelector(".btn").addEventListener("click", async () =>{
 });
 document.querySelector("#openModalButton").addEventListener("click",modal());
 
-closeModal();
+window.addEventListener("click", closeModal);
