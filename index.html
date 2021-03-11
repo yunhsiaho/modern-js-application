@@ -76,8 +76,14 @@
 
   </div> 
   
-  
-  <script type="module" src="module/index.js"></script>
+  <script>
+    var uploadAvatar = (event)=> {
+      var avatar = document.getElementById('output');
+      avatar.src = URL.createObjectURL(event.target.files[0]);
+    };
+  </script>
+  <script type="module" src="src/module/index.js"></script>
+ 
 </body>
 
 </html>

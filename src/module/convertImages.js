@@ -1,6 +1,6 @@
 //function convert image
-const convertImages = () =>{
-
+export const convertImages = () =>{
+ 
     document.querySelector("#file").addEventListener("change",(e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
@@ -10,4 +10,3 @@ const convertImages = () =>{
         reader.readAsDataURL(file)
     });
 }
-export {convertImages};

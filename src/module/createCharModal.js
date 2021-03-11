@@ -1,5 +1,5 @@
 //------------------------------add a character-------------------------------
-const createCharModal = ()  => {
+export const createCharModal = ()  => {
 
     // document.querySelector(".button-modal").addEventListener("click",  () =>{
  
@@ -37,5 +37,4 @@ const createCharModal = ()  => {
           })
  
      //});
- }
- export {createCharModal};
+}
