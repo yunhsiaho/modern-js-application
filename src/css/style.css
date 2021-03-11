@@ -244,6 +244,8 @@ body {
           width: 10vw;
           height: 10vw;
           box-shadow: -2px -2px 3px #90f4fd; }
+      body .flex-container .carte li:hover {
+        box-shadow: 3px 3px 7px #90f4fd; }
       body .flex-container .carte .card-body {
         width: 70%;
         padding: 2%; }
@@ -284,6 +286,91 @@ body {
             color: #b6ff8b;
             border: 2px solid #b6ff8b;
             box-shadow: 2px 2px 7px #b6ff8b; }
+    body .flex-container .button {
+      text-decoration: none;
+      padding: 0.5vw;
+      margin-left: 45%;
+      text-align: center;
+      width: 40%;
+      color: white;
+      background-color: black;
+      font-size: 1.2vw;
+      border: 2px solid white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px #7d0381; }
+    body .flex-container .button:hover {
+      color: #90f4fd;
+      border: 2px solid lightBlue;
+      box-shadow: 2px 2px 5px lightBlue; }
+    body .flex-container .button:active {
+      color: #b6ff8b;
+      border: 2px solid #b6ff8b;
+      box-shadow: 2px 2px 7px #b6ff8b; }
+    body .flex-container .pop-up {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(4, 21, 39, 0.7); }
+    body .flex-container .pop-up-content {
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 3px solid white;
+      position: fixed;
+      border-radius: 5px;
+      margin-top: 10%;
+      margin-left: 22%;
+      width: 50%;
+      height: auto;
+      font-size: 1.5vw;
+      padding: 2vw; }
+      body .flex-container .pop-up-content span {
+        cursor: pointer; }
+    body .flex-container .container {
+      margin: 3%;
+      justify-content: center;
+      display: flex;
+      flex-direction: row; }
+      body .flex-container .container .create {
+        width: 50%;
+        display: flex;
+        flex-direction: column; }
+        body .flex-container .container .create input {
+          margin-top: 2%;
+          margin-bottom: 2%;
+          padding: 0.5vw 0.5vw;
+          box-sizing: border-box;
+          background-color: rgba(4, 21, 39, 0.5);
+          color: white; }
+        body .flex-container .container .create input:focus {
+          border: 1px solid #fce51e;
+          box-shadow: 3px 3px 5px #fce51e; }
+        body .flex-container .container .create input::-moz-placeholder {
+          color: white; }
+        body .flex-container .container .create textarea {
+          resize: none;
+          overflow-y: scroll;
+          padding: 1vw;
+          background-color: rgba(4, 21, 39, 0.5);
+          color: white; }
+        body .flex-container .container .create textarea:focus {
+          border: 1px solid #fce51e;
+          box-shadow: 3px 3px 5px #fce51e; }
+        body .flex-container .container .create textarea::-moz-placeholder {
+          color: white; }
+      body .flex-container .container .avatar {
+        width: 50%;
+        text-align: center; }
+        body .flex-container .container .avatar img {
+          width: 70%; }
+        body .flex-container .container .avatar label {
+          cursor: pointer; }
+        body .flex-container .container .avatar label:active {
+          color: #ff4040;
+          text-shadow: 2px 2px 5px #ff4040; }
 
 @keyframes color-change {
   0% {
