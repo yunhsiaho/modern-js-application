@@ -1,1 +1,187 @@
-<!DOCTYPE html><html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta name="description" content=""> <meta name="author" content=""> <title>Character Manager js</title> <link rel="preconnect" href="https://fonts.gstatic.com"> <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"> <link rel="stylesheet" href="974b6eb4ac2dfe59ee11af5ceb97af44.css"> </head> <body> <div class="top"> <h1 class="heroTitle">Heroes in the Galaxy</h1> <p>In this spacious, mysterious galaxy, there are numerous super heroes , who have special powers to beat the alien intruders.</p> <p>Do you want to become a hero, too? Come create your own hero and join them.</p> <a href="#" alt="#" class="button button-modal" id="openModalButton" onclick="document.getElementById(&quot;popUpId&quot;).style.display=&quot;block&quot;"> CREATE HERO </a> <div class="pop-up" id="popUpId"> <form action="/action_page.php" method="post" class="pop-up-content animate"> <span onclick="document.getElementById(&quot;popUpId&quot;).style.display=&quot;none&quot;" class="close">&times;</span> <div class="container"> <div class="create"> <label for="name">Name</label> <input id="name" type="text" placeholder="Enter Hero's Name" required> <label for="short Description">Short Description</label> <input id="shortDescription" type="text" placeholder="Enter Short Description" required> <label for="powers">Description</label> <textarea id="description" rows="5" cols="40" placeholder="Enter Hero's Description" required></textarea> </div> <div class="avatar"> <p><input class="image" type="file" accept="image/*" name="image" id="file" style="display:none"></p> <p><label for="file">Click to upload Hero Avatar</label></p> <p><img id="output"></p> </div> </div> <a href="#" alt="#" class="button button-create" id="create-button" onclick="document.getElementById(&quot;popUpId&quot;).style.display=&quot;none&quot;">CREATE!</a> </form> </div> </div> <button class="btn">show-cards</button> <div class="flex-container"> <template id="tpl"> <li class="theCard"> <img class="card-img" src="./" alt=""> <div class="card-body"> <h4 class="card-name"></h4> <p class="card-shortDescription"></p> <div class="card-description"></div> <div class="buttonGroup"> <button class="button button-edit" onclick="document.getElementById(&quot;popUpId2&quot;).style.display=&quot;block&quot;">Edit</button> <button class="button button-delete">Delete</button> </div> </div>  </li> </template> <div class="pop-up" id="popUpId2"> <form action="/action_page.php" method="post" class="pop-up-content animate"> <span onclick="document.getElementById(&quot;popUpId2&quot;).style.display=&quot;none&quot;" class="close">&times;</span> <div class="container"> <div class="create"> <label for="name">Name</label> <input id="name2" type="text" placeholder="Enter Hero's Name" required> <label for="short Description">Short Description</label> <input id="shortDescription2" type="text" placeholder="Enter Short Description" required> <label for="powers">Description</label> <textarea id="description2" rows="5" cols="40" placeholder="Enter Hero's Description" required></textarea> </div> <div class="avatar"> <p><input class="image" type="file" accept="image/*" name="image" id="file2" style="display:none"></p> <p><label for="file">Click to CHANGE Hero Avatar</label></p> <p><img id="output2"></p> </div> </div> <a href="#" alt="#" class="button button-create" id="create-button2" onclick="document.getElementById(&quot;popUpId2&quot;).style.display=&quot;none&quot;">EDIT!</a> </form> </div> <div class="carte" id="target"></div> </div> <script src="e236802c2047bb907b165f87835fbcd9.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Character Manager js</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="974b6eb4ac2dfe59ee11af5ceb97af44.css" />
+  </head>
+  <body>
+    <div class="top">
+      <h1 class="heroTitle">Heroes in the Galaxy</h1>
+      <p>
+        In this spacious, mysterious galaxy, there are numerous super heroes ,
+        who have special powers to beat the alien intruders.
+      </p>
+      <p>
+        Do you want to become a hero, too? Come create your own hero and join
+        them.
+      </p>
+      <a
+        href="#"
+        alt="#"
+        class="button button-modal"
+        id="openModalButton"
+        onclick='document.getElementById("popUpId").style.display="block"'
+      >
+        CREATE HERO
+      </a>
+      <div class="pop-up" id="popUpId">
+        <form
+          action="/action_page.php"
+          method="post"
+          class="pop-up-content animate"
+        >
+          <span
+            onclick='document.getElementById("popUpId").style.display="none"'
+            class="close"
+            >&times;</span
+          >
+          <div class="container">
+            <div class="create">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Enter Hero's Name"
+                required
+              />
+              <label for="short Description">Short Description</label>
+              <input
+                id="shortDescription"
+                type="text"
+                placeholder="Enter Short Description"
+                required
+              />
+              <label for="powers">Description</label>
+              <textarea
+                id="description"
+                rows="5"
+                cols="40"
+                placeholder="Enter Hero's Description"
+                required
+              ></textarea>
+            </div>
+            <div class="avatar">
+              <p>
+                <input
+                  class="image"
+                  type="file"
+                  accept="image/*"
+                  name="image"
+                  id="file"
+                  style="display: none"
+                />
+              </p>
+              <p><label for="file">Click to upload Hero Avatar</label></p>
+              <p><img id="output" /></p>
+            </div>
+          </div>
+          <a
+            href="#"
+            alt="#"
+            class="button button-create"
+            id="create-button"
+            onclick='document.getElementById("popUpId").style.display="none"'
+            >CREATE!</a
+          >
+        </form>
+      </div>
+    </div>
+    <button class="btn">show-cards</button>
+    <div class="flex-container">
+      <template id="tpl">
+        <li class="theCard">
+          <img class="card-img" src="./" alt="" />
+          <div class="card-body">
+            <h4 class="card-name"></h4>
+            <p class="card-shortDescription"></p>
+            <div class="card-description"></div>
+            <div class="buttonGroup">
+              <button
+                class="button button-edit"
+                onclick='document.getElementById("popUpId2").style.display="block"'
+              >
+                Edit
+              </button>
+              <button class="button button-delete">Delete</button>
+            </div>
+          </div>
+        </li>
+      </template>
+      <div class="pop-up" id="popUpId2">
+        <form
+          action="/action_page.php"
+          method="post"
+          class="pop-up-content animate"
+        >
+          <span
+            onclick='document.getElementById("popUpId2").style.display="none"'
+            class="close"
+            >&times;</span
+          >
+          <div class="container">
+            <div class="create">
+              <label for="name">Name</label>
+              <input
+                id="name2"
+                type="text"
+                placeholder="Enter Hero's Name"
+                required
+              />
+              <label for="short Description">Short Description</label>
+              <input
+                id="shortDescription2"
+                type="text"
+                placeholder="Enter Short Description"
+                required
+              />
+              <label for="powers">Description</label>
+              <textarea
+                id="description2"
+                rows="5"
+                cols="40"
+                placeholder="Enter Hero's Description"
+                required
+              ></textarea>
+            </div>
+            <div class="avatar">
+              <p>
+                <input
+                  class="image"
+                  type="file"
+                  accept="image/*"
+                  name="image"
+                  id="file2"
+                  style="display: none"
+                />
+              </p>
+              <p><label for="file">Click to CHANGE Hero Avatar</label></p>
+              <p><img id="output2" /></p>
+            </div>
+          </div>
+          <a
+            href="#"
+            alt="#"
+            class="button button-create"
+            id="create-button2"
+            onclick='document.getElementById("popUpId2").style.display="none"'
+            >EDIT!</a
+          >
+        </form>
+      </div>
+      <div class="carte" id="target"></div>
+    </div>
+    <script src="e236802c2047bb907b165f87835fbcd9.js"></script>
+  </body>
+</html>

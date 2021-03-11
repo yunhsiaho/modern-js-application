@@ -1,11 +1,13 @@
 # modern-js-application
 
-[Hsia & Josué modern js application]( https://josue-u.github.io/modern-js-application/)
+[Hsia & Josué modern js application](https://josue-u.github.io/modern-js-application/)
+
 # modern-js-application
 
 Modern Js Application is a group project made by Josue and Hsia. It's a challenge asigned by BECODE LIEGE code training center. We had been working on this from 08/03/2021-11/03/2021 to learn about the teamworking pattern and consolidate our knowledges in the codes we've learned.
 
 # The mission
+
 t's Monday morning. I sit at my desk, start the computer, and my two screens light up.
 
 I open up my text editor and the terminal in the first screen. I type two simple words in the terminal: npm start and press ENTER. A few seconds later a browser tab launches in the second screen with a local server where I can see the application as I develop it.
@@ -21,15 +23,15 @@ I glance at my second screen. I haven't touched a thing since hitting Save, but 
 I type npm build in the terminal and all my SASS and JS is bundled, optimized and minified, ready to ship to the browser with optimal performance. Development never felt better.
 
 # Check our project(link)
+
 [Hsia & Josué page]()
 
 # The languages used
- * JS
- * Parcel
 
-
+- JS
+- Parcel
 
 # Who make this master piece?
-* [Josue's Github](https://github.com/Josue-U)
-* [Hsia's Github](https://github.com/yunhsiaho)
 
+- [Josue's Github](https://github.com/Josue-U)
+- [Hsia's Github](https://github.com/yunhsiaho)

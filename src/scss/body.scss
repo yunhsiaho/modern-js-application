@@ -147,153 +147,56 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding:1%;
-        img{
-            border:0.5px solid gray;
-            width:10vw;
-            height:10vw;
-            box-shadow:  -2px -2px 3px $lightBlue;
-            }
+        padding: 1%;
+        img {
+          border: 0.5px solid gray;
+          width: 10vw;
+          height: 10vw;
+          box-shadow: -2px -2px 3px $lightBlue;
         }
-        li:hover{
-            box-shadow: 3px 3px 7px $lightBlue;
+      }
+      li:hover {
+        box-shadow: 3px 3px 7px $lightBlue;
+      }
+      .card-body {
+        width: 70%;
+        padding: 2%;
+        .card-name {
+          font-size: 1.5vw;
+          text-shadow: 2px 2px 5px $purple;
+          margin-top: 1%;
+          margin-bottom: 1%;
         }
-        .card-body{
-            width:70%;
-            padding:2%;
-            .card-name{
-                font-size: 1.5vw;
-                text-shadow: 2px 2px 5px $purple;
-                margin-top:1%;
-                margin-bottom:1%;
-            }
-            .card-shortDescription{
-                font-size: 1vw;
-                text-shadow: 1px 1px 3px $purple;
-            }
-            .card-description{
-                font-size: 1vw;
-                color:gray;
-            }
-            .buttonGroup{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                margin-top: 2%;
-                .button{
-                    text-decoration: none;
-                    padding:0.5vw;
-                    margin-left: auto;
-                    margin-right: auto;         
-                    text-align:center;
-                    width:40%;            
-                    color:white;
-                    background-color: black;
-                    font-size: 1.2vw;
-                    border:2px solid white;
-                    border-radius:5px;
-                    box-shadow: 2px 2px 5px $purple;
-                }        
-                @include button-function; 
-            }
-            }
+        .card-shortDescription {
+          font-size: 1vw;
+          text-shadow: 1px 1px 3px $purple;
         }
-        .button{
+        .card-description {
+          font-size: 1vw;
+          color: gray;
+        }
+        .buttonGroup {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 2%;
+          .button {
             text-decoration: none;
-            padding:0.5vw;
-            margin-left: 45%;
-            // margin-right: 30%;         
-            text-align:center;
-            width:40%;            
-            color:white;
+            padding: 0.5vw;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 40%;
+            color: white;
             background-color: black;
             font-size: 1.2vw;
-            border:2px solid white;
-            border-radius:5px;
+            border: 2px solid white;
+            border-radius: 5px;
             box-shadow: 2px 2px 5px $purple;
-        }   
-        @include button-function; 
-        .pop-up{
-            display:none ;
-            position:fixed;
-            z-index: 1;
-            left:0;
-            top:0;
-            width: 100%;
-            height:100%;
-            overflow:auto;
-            background-color:rgba(4, 21, 39, 0.7);            
+          }
+          @include button-function;
         }
-        .pop-up-content{
-            background-color: rgba(0,0,0,0.8); ;
-            border:3px solid white;
-            position:fixed;
-            border-radius:5px;
-            margin-top: 10%;
-            margin-left:22%;
-            width:50%;
-            height:auto;
-            font-size: 1.5vw;
-            padding:2vw;
-            span{
-                cursor:pointer;
-            } 
-        }
-        .container{            
-            margin:3%;
-            justify-content: center;
-            display: flex;
-            flex-direction: row;
-            .create{
-                width:50%;
-                display: flex;
-                flex-direction: column;
-                input{
-                    margin-top:2%;
-                    margin-bottom:2%;
-                    padding:0.5vw 0.5vw;
-                    box-sizing: border-box;
-                    background-color:rgba(4,21,39,0.5); 
-                    color:white;               
-                }
-                input:focus{
-                    border:1px solid $yellow;
-                    box-shadow: 3px 3px 5px $yellow;
-                }
-                input::-moz-placeholder{
-                    color:white;
-                }
-                textarea{
-                    resize:none;
-                    overflow-y:scroll;
-                    padding:1vw;
-                    background-color:rgba(4,21,39,0.5);
-                    color:white;
-                }
-                textarea:focus{
-                    border:1px solid $yellow;
-                    box-shadow: 3px 3px 5px $yellow;
-                }
-                textarea::-moz-placeholder{
-                    color:white;
-                }
-            }
-            .avatar{
-                width:50%;          
-                text-align:center;
-                img {
-                    width:70%;
-                }
-                label{
-                cursor:pointer;                               
-                }
-                label:active{
-                    color:$red;
-                    text-shadow: 2px 2px 5px $red;
-                } 
-            }            
-        }
-        
+      }
     }
     .button {
       text-decoration: none;
@@ -391,7 +294,102 @@ body {
       }
     }
   }
-
+  .button {
+    text-decoration: none;
+    padding: 0.5vw;
+    margin-left: 45%;
+    // margin-right: 30%;
+    text-align: center;
+    width: 40%;
+    color: white;
+    background-color: black;
+    font-size: 1.2vw;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px $purple;
+  }
+  @include button-function;
+  .pop-up {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(4, 21, 39, 0.7);
+  }
+  .pop-up-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid white;
+    position: fixed;
+    border-radius: 5px;
+    margin-top: 10%;
+    margin-left: 22%;
+    width: 50%;
+    height: auto;
+    font-size: 1.5vw;
+    padding: 2vw;
+    span {
+      cursor: pointer;
+    }
+  }
+  .container {
+    margin: 3%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    .create {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      input {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 0.5vw 0.5vw;
+        box-sizing: border-box;
+        background-color: rgba(4, 21, 39, 0.5);
+        color: white;
+      }
+      input:focus {
+        border: 1px solid $yellow;
+        box-shadow: 3px 3px 5px $yellow;
+      }
+      input::-moz-placeholder {
+        color: white;
+      }
+      textarea {
+        resize: none;
+        overflow-y: scroll;
+        padding: 1vw;
+        background-color: rgba(4, 21, 39, 0.5);
+        color: white;
+      }
+      textarea:focus {
+        border: 1px solid $yellow;
+        box-shadow: 3px 3px 5px $yellow;
+      }
+      textarea::-moz-placeholder {
+        color: white;
+      }
+    }
+    .avatar {
+      width: 50%;
+      text-align: center;
+      img {
+        width: 70%;
+      }
+      label {
+        cursor: pointer;
+      }
+      label:active {
+        color: $red;
+        text-shadow: 2px 2px 5px $red;
+      }
+    }
+  }
+}
 
 @keyframes color-change {
   0% {
