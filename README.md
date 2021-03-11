@@ -22,10 +22,6 @@ I glance at my second screen. I haven't touched a thing since hitting Save, but 
 
 I type npm build in the terminal and all my SASS and JS is bundled, optimized and minified, ready to ship to the browser with optimal performance. Development never felt better.
 
-# Check our project(link)
-
-[Hsia & Josué page]()
-
 # The languages used
 
 - JS
