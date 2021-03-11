@@ -1,14 +1,15 @@
 export const fetchEdit = async(id)=>{
     try{
-        editName = document.querySelector("#name2").input;
+        // const editName = document.querySelector("#name2").value;
         await fetch(`https://character-database.becode.xyz/characters/${id}`,{
                 method: "PUT",
                 header : {
                     "content-Type": "application/json",
                 },                
         });
-        console.log(editName);
+        
     }catch (err){
         console.error(`Unknown character whith id:${id}`);
     } 
-}
+};
+// console.log(editName);

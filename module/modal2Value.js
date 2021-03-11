@@ -5,4 +5,4 @@ export const setModal2Value = (name, shortDescription, description)=>{
     inputNameModal2.value = name;
     inputshortDescriptionModal2.value = shortDescription;
     inputDescriptionModal2.value = description;
-} 
+}; 
