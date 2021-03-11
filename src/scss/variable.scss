@@ -1,0 +1,20 @@
+$purple:rgb(125, 3, 129);
+$lightGreen:rgb(182, 255, 139);
+$lightBlue:rgb(144, 244, 253);
+$yellow:rgb(252, 229, 30);
+$red: rgb(255, 64, 64);
+$darkblue:rgb(4,21,39);
+
+
+@mixin button-function{
+    .button:hover{
+        color:$lightBlue;
+        border:2px solid lightBlue;
+        box-shadow: 2px 2px 5px lightBlue;
+    }
+    .button:active{
+        color:$lightGreen;
+        border:2px solid $lightGreen;
+        box-shadow: 2px 2px 7px $lightGreen;
+    }      
+}
